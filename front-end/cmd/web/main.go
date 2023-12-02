@@ -33,6 +33,7 @@ func render(w http.ResponseWriter, t string) {
 	for _, x := range partials {
 		templateSlice = append(templateSlice, x)
 	}
+	fmt.Println(templateSlice)
 
 	tmpl, err := template.ParseFiles(templateSlice...)
 	if err != nil {
